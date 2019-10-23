@@ -17,7 +17,6 @@ sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
 ### Install the camera calibration package
 `sudo apt-get install ros-melodic-camera-calibration`
 ### Install the apriltag library
-`apt-get install ros-melodic-apriltag # Is this needed?`<br/>
 `sudo apt-get install ros-melodic-apriltag-ros`
 ### Install the ROS bridge
 `sudo apt-get install ros-melodic-rosbridge-server`
