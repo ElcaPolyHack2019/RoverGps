@@ -2,7 +2,7 @@
 
 # Prerequisites
 * Install Docker Desktop for Windows
-* Run the container `docker run --name ros -d -p 5901:5901 -p 6901:6901 -p 9090:9090 henry2423/ros-vnc-ubuntu:melodic`
+* Run the container `docker run --name ros -d -p 5901:5901 -p 6901:6901 -p 11311:11311 -p 9090:9090 henry2423/ros-vnc-ubuntu:melodic`
 
 # Installation and Configuration
 ### Update the ROS Package Repository GPG Key
