@@ -1,10 +1,10 @@
 # RoverGps
 
-## Prerequisites
+# Prerequisites
 * Install Docker Desktop for Windows
 * Run the container `docker run --name ros -d -p 5901:5901 -p 6901:6901 -p 9090:9090 henry2423/ros-vnc-ubuntu:melodic`
 
-## Installation and Configuration
+# Installation and Configuration
 ### Update the ROS Package Repository GPG Key
 ```
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
@@ -26,7 +26,7 @@ sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
 ### Test the video stream
 `rosrun video_stream_opencv test_video_resource.py rtsp://viewer:viewer@192.168.1.50/axis-media/media.amp`
 
-## Running
+# Running
 ### Run the ROS master
 `roscore`
 ### Run the ROS bridge
@@ -40,8 +40,7 @@ sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
 cd /home/ros/Desktop/gps/
 roslaunch mycamera.launch
 ```
-
-## launch the detection
+### Run the continuous detection
 ```
 cd /home/ros/Desktop/gps/
 roslaunch my_continuous_detection.launch
@@ -55,7 +54,7 @@ See http://library.isr.ist.utl.pt/docs/roswiki/camera_calibration(2f)Tutorials(2
    1. `mkdir /tmp/calibrationdata/`
    1. `tar xvzf /tmp/calibrationdata.tar.gz -C /tmp/calibrationdata/`
 
-## File contents
+# File contents
 ### mycamera.launch
 ```
 <launch>
