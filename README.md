@@ -74,13 +74,13 @@ See http://library.isr.ist.utl.pt/docs/roswiki/camera_calibration(2f)Tutorials(2
         <arg name="frame_id" value="camera" />
         <!-- camera info loading, take care as it needs the "file:///" at the start , e.g.:
         "file:///$(find your_camera_package)/config/your_camera.yaml" -->
-        <arg name="camera_info_url" value="file:///home/ros/Desktop/tests/camera_info.yaml" />
+        <arg name="camera_info_url" value="file:///home/ros/Desktop/gps/camera_info.yaml" />
         <!-- flip the image horizontally (mirror it) -->
         <arg name="flip_horizontal" value="false" />
         <!-- flip the image vertically -->
         <arg name="flip_vertical" value="false" />
         <!-- visualize on an image_view window the stream generated -->
-        <arg name="visualize" value="true" />
+        <arg name="visualize" value="false" />
    </include>
 </launch>
 ```
@@ -117,8 +117,8 @@ projection_matrix:
   <arg name="image_topic" default="image_raw" />
 
   <!-- Set parameters -->
-  <rosparam command="load" file="/home/ros/Desktop/tests/config/settings.yaml" ns="$(arg node_namespace)" />
-  <rosparam command="load" file="/home/ros/Desktop/tests/config/tags.yaml" ns="$(arg node_namespace)" />
+  <rosparam command="load" file="/home/ros/Desktop/gps/config/settings.yaml" ns="$(arg node_namespace)" />
+  <rosparam command="load" file="/home/ros/Desktop/gps/config/tags.yaml" ns="$(arg node_namespace)" />
   
   <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="$(arg node_namespace)" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
     <!-- Remap topics from those used in code to those on the ROS network -->
