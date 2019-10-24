@@ -16,6 +16,8 @@ sudo apt-key del 421C365BD9FF1F717815A3895523BAEEB01FA116
 `sudo apt-get install ros-melodic-image-view`
 ### Install the camera calibration package
 `sudo apt-get install ros-melodic-camera-calibration`
+### Install the undistorted image node
+`sudo apt-get install ros-melodic-image-proc`
 ### Install the apriltag library
 `sudo apt-get install ros-melodic-apriltag-ros`
 ### Install the ROS bridge
@@ -52,6 +54,9 @@ See http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
 1. Extract the calibration data
    1. `mkdir /tmp/calibrationdata/`
    1. `tar xvzf /tmp/calibrationdata.tar.gz -C /tmp/calibrationdata/`
+1. Run the camera image capturing
+1. View the undistorted image
+   1. `ROS_NAMESPACE=camera rosrun image_proc image_proc`
 
 # File contents
 ### mycamera.launch
