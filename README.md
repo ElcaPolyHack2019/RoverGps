@@ -55,6 +55,8 @@ See http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
 1. Extract the calibration data
    1. `mkdir /tmp/calibrationdata/`
    1. `tar xvzf /tmp/calibrationdata.tar.gz -C /tmp/calibrationdata/`
+1. Get the calibration file
+   1. `cat /tmp/calibrationdata/ost.yaml`
 1. Run the camera image capturing
 1. View the undistorted image
    1. `ROS_NAMESPACE=camera rosrun image_proc image_proc`
