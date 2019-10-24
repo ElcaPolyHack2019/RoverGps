@@ -9,3 +9,4 @@ tag_refine_pose:   0
 tag_debug:         0 
 publish_tf:        true
 publish_tag_detections_image: true
+remove_duplicates: true

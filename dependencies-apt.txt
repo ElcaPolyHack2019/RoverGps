@@ -1,0 +1,7 @@
+ros-melodic-image-view
+ros-melodic-camera-calibration
+ros-melodic-apriltag-ros
+ros-melodic-rosbridge-server
+ros-melodic-video-stream-opencv
+ros-melodic-rqt
+ros-melodic-rqt-common-plugins

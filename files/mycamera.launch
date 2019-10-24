@@ -1,10 +1,12 @@
 <launch>
+   <arg name="camera_ip" default="192.168.1.50" />
+   <arg name="camera_calibration" default="file://$(dirname)/camera_info_large.yaml" />
    <!-- launch video stream -->
    <include file="$(find video_stream_opencv)/launch/camera.launch" >
         <!-- node name and ros graph name -->
         <arg name="camera_name" value="camera" />
         <!-- means video device 0, /dev/video0 -->
-        <arg name="video_stream_provider" value="rtsp://viewer:viewer@192.168.1.50/axis-media/media.amp" />
+        <arg name="video_stream_provider" value="rtsp://viewer:viewer@$(arg camera_ip)/axis-media/media.amp" />
         <!-- set camera fps to (if the device allows) -->
         <arg name="set_camera_fps" value="30"/>
         <!-- set buffer queue size of frame capturing to -->
@@ -15,7 +17,7 @@
         <arg name="frame_id" value="camera" />
         <!-- camera info loading, take care as it needs the "file:///" at the start , e.g.:
         "file:///$(find your_camera_package)/config/your_camera.yaml" -->
-        <arg name="camera_info_url" value="file:///home/ros/Desktop/gps/camera_info.yaml" />
+        <arg name="camera_info_url" value="$(arg camera_calibration)" />
         <!-- flip the image horizontally (mirror it) -->
         <arg name="flip_horizontal" value="false" />
         <!-- flip the image vertically -->

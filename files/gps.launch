@@ -1,0 +1,11 @@
+<launch>
+    <arg name="config_root" value="$(dirname)" />
+    <include file="$(dirname)/mycamera.launch">
+        <arg name="camera_ip" default="192.168.1.50" />
+        <arg name="camera_calibration" default="file://$(arg config_root)/camera_info_large.yaml" />
+    </include>
+    
+    <include file="$(dirname)/my_continuous_detection.launch" />
+
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+</launch>

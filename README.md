@@ -60,3 +60,27 @@ See http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
 1. Run the camera image capturing
 1. View the undistorted image
    1. `ROS_NAMESPACE=camera rosrun image_proc image_proc`
+
+# Docker
+See https://hub.docker.com/r/elcalan/rovergps
+
+Build the image
+```
+docker build -t elcalan/rovergps:latest .
+```
+
+Run the image
+```
+docker run -it --rm --name gps -p 11311:11311 -p 9090:9090 -v $SOMEPATH/RoverGps:/home/ros/gps elcalan/rovergps:latest
+```
+
+Run a Bash inside the container
+```
+docker run -it --rm --name gps -p 11311:11311 -p 9090:9090 -v $SOMEPATH/RoverGps:/home/ros/gps elcalan/rovergps:latest /bin/bash
+```
+
+Attach with a new Bash to the running container
+```
+docker exec -it gps /bin/bash
+source /opt/ros/melodic/setup.bash
+```
