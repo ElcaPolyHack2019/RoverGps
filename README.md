@@ -91,7 +91,7 @@ See http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
    </include>
 </launch>
 ```
-### camera_info.yaml
+### camera_info.yaml (small board)
 ```
 image_width: 1920
 image_height: 1080
@@ -113,6 +113,29 @@ projection_matrix:
   rows: 3
   cols: 4
   data: [682.614807, 0.000000, 971.459725, 0.000000, 0.000000, 890.354187, 528.307678, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000]
+```
+### camera_info.yaml (large board)
+```
+image_width: 1920
+image_height: 1080
+camera_name: camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [1031.329272, 0.000000, 1007.370190, 0.000000, 1032.889333, 561.731185, 0.000000, 0.000000, 1.000000]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.307097, 0.080317, -0.001003, -0.001170, 0.000000]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [744.610474, 0.000000, 997.025425, 0.000000, 0.000000, 935.572083, 565.417533, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000]
 ```
 ### my_continuous_detection.launch
 ```
