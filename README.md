@@ -46,7 +46,7 @@ roslaunch my_continuous_detection.launch
 ```
 
 # One-time camera calibration
-See http://library.isr.ist.utl.pt/docs/roswiki/camera_calibration(2f)Tutorials(2f)MonocularCalibration.html
+See http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
 1. `rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0348 image:=/camera/image_raw camera:=/camera`
 1. Find the calibration data in `/tmp/calibrationdata.tar.gz`
 1. Extract the calibration data
