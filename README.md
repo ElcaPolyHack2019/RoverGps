@@ -71,12 +71,12 @@ docker build -t elcalan/rovergps:latest .
 
 Run the image
 ```
-docker run -it --rm --name gps -p 11311:11311 -p 9090:9090 -v $SOMEPATH/RoverGps:/home/ros/gps elcalan/rovergps:latest
+docker run -it --rm --name gps --env "CAMERA_IP=192.168.1.50" -p 11311:11311 -p 9090:9090 -v $(pwd)/RoverGps:/home/ros/gps elcalan/rovergps:latest
 ```
 
 Run a Bash inside the container
 ```
-docker run -it --rm --name gps -p 11311:11311 -p 9090:9090 -v $SOMEPATH/RoverGps:/home/ros/gps elcalan/rovergps:latest /bin/bash
+docker run -it --rm --name gps -p 11311:11311 -p 9090:9090 -v $(pwd)/RoverGps:/home/ros/gps elcalan/rovergps:latest /bin/bash
 ```
 
 Attach with a new Bash to the running container
