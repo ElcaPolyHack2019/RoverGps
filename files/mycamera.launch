@@ -6,7 +6,7 @@
         <!-- node name and ros graph name -->
         <arg name="camera_name" value="camera" />
         <!-- means video device 0, /dev/video0 -->
-        <arg name="video_stream_provider" value="rtsp://viewer:viewer@$(arg camera_ip)/axis-media/media.amp" />
+        <arg name="video_stream_provider" value="http://viewer:viewer@$(arg camera_ip)/mjpg/video.mjpg?resolution=1920x1080" />
         <!-- set camera fps to (if the device allows) -->
         <arg name="set_camera_fps" value="30"/>
         <!-- set buffer queue size of frame capturing to -->
